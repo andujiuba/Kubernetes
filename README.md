@@ -16,6 +16,9 @@
 ![image](https://user-images.githubusercontent.com/88186581/135854674-21d46186-a46b-45c4-9585-3a2df4f58eb2.png)
 ![image](https://user-images.githubusercontent.com/88186581/135854776-2257d805-20e7-4aa3-93b2-6f9294321141.png)
 
+- running a container - individual
+- k8 allows for multiple replicas - facillitates the user if one container goes down
+- makes app highly available and sclable
 
 ### Automation
 
@@ -54,19 +57,52 @@ NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   73m
 ```
 
+## Setting Up
 
+- create `nginx-deploy.yml` file in new folder
 
+```yaml
+# K8 works w API versions to declare the resources
+# We have to declare the apiVersion ans the kind of service/component
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment # Naming the deployment
 
+spec:
+  selector:
+    matchLabels:
+      app: nginx # Look for this label to mtch w K8 service
 
+  # Let's creatw a replica set of this with 2 instances/pods
+  replicas: 2
 
+  # Template to use its label for K8 service to launch in the browser
+  template:
+    metadata:
+      labels:
+        app: nginx # This label connects to the service
 
+    # Let's define the container spec
+    spec:
+      containers:
+        - name: nginx
+          image: akunduj/sre_node_app:v1
+          ports:
+          - containerPort: 80
+          
+```
+- create the file:
+`kubectl create -f "YAML_file_name.extention"`
 
+![image](https://user-images.githubusercontent.com/88186581/135880729-392dee03-a51e-4981-80a3-d2738a65b9d0.png)
 
+`kubectl get deploy`
 
+![image](https://user-images.githubusercontent.com/88186581/135880775-61e64ca3-b678-48d3-bd81-e5c6b8f6be21.png)
 
+`kubectl get pods`
 
-
-
-
+![image](https://user-images.githubusercontent.com/88186581/135880821-c5968c43-7502-486e-99b6-c58604848a49.png)
 
