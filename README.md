@@ -1,6 +1,6 @@
 # Kubernetes
 
-![image](https://user-images.githubusercontent.com/88186581/135876172-951634b6-5ef3-42f8-a2c3-251d85410850.png)
+![image](https://user-images.githubusercontent.com/88186581/135876352-bb3b044a-cba2-456d-b76f-a02b274f41af.png)
 
 ## What is Kubernetes?
 
@@ -38,12 +38,14 @@
 
 ![image](https://user-images.githubusercontent.com/88186581/135873961-49dff8b4-ff11-4d1c-895b-d94080ce03a3.png)
 
-In the terminal: 
+#### In the terminal: 
 
 `kubectl` to see all commands
+
 ![image](https://user-images.githubusercontent.com/88186581/135875521-7bf6590e-4997-418e-ad68-3b4afb640af3.png)
 
 `kubectl version`
+
 ![image](https://user-images.githubusercontent.com/88186581/135874162-e96b66a8-c8a6-462f-a8df-abb3ac8f0a96.png)
 
 `kubectl get service`
