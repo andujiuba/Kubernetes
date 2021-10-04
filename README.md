@@ -110,4 +110,47 @@ spec:
 
 ![image](https://user-images.githubusercontent.com/88186581/135881406-ab6a95eb-019b-4198-a665-6251dce059e1.png)
 
+`kubectl describe deploy "DEPLOYMENT_NAME"`
+
+![image](https://user-images.githubusercontent.com/88186581/135881953-22a54c38-4a5e-45c4-9942-f78d68333dcd.png)
+
+`kubectl edit deploy "DEPLOYMENT_NAME"` --> change configurations of deployment
+
+
+Create a `nginx-service.yml` file
+
+```yaml
+---
+
+apiVersion: v1
+kind: Service
+# Metadata for name
+metadata:
+
+  name: nginx-deployment
+  namespace: default
+
+spec:
+  ports:
+  - nodePort: 30442
+    port: 80
+    protocol: TCP
+    targetPort: 80
+
+  
+# Lets define the selector and label
+  selector:
+    app: nginx # This label connects this service to deployment
+
+  # Creatikng LoadBalancer type of deployment
+  type: LoadBalancer
+```
+
+`kubectl get service`
+```bash
+NAME               TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+kubernetes         ClusterIP      10.96.0.1        <none>        443/TCP        127m
+nginx-deployment   LoadBalancer   10.110.221.129   localhost     80:30442/TCP   10s
+```
+
 
