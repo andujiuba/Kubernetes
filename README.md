@@ -116,6 +116,8 @@ spec:
 
 `kubectl edit deploy "DEPLOYMENT_NAME"` --> change configurations of deployment
 
+### rewatch monday afternoon 
+
 
 Create a `nginx-service.yml` file
 
@@ -153,4 +155,6 @@ kubernetes         ClusterIP      10.96.0.1        <none>        443/TCP        
 nginx-deployment   LoadBalancer   10.110.221.129   localhost     80:30442/TCP   10s
 ```
 
+`kubectl delete pod "POD NAME"`
+- set up correctly, than delete a pod wil not affect the `LocalHost` webpage
 
