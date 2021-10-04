@@ -106,3 +106,8 @@ spec:
 
 ![image](https://user-images.githubusercontent.com/88186581/135880821-c5968c43-7502-486e-99b6-c58604848a49.png)
 
+`kubectl describe pod "POD_NAME"`
+
+![image](https://user-images.githubusercontent.com/88186581/135881406-ab6a95eb-019b-4198-a665-6251dce059e1.png)
+
+
