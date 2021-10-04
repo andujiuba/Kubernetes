@@ -46,7 +46,7 @@
 
 `kubectl version`
 
-![image](https://user-images.githubusercontent.com/88186581/135874162-e96b66a8-c8a6-462f-a8df-abb3ac8f0a96.png)
+![image](https://user-images.githubusercontent.com/88186581/135877957-eb27ee74-2b77-443e-8b17-0712c8c3eaed.png)
 
 `kubectl get service`
 ```bash
