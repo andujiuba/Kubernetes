@@ -21,6 +21,26 @@ benefits:
 
 ![image](https://user-images.githubusercontent.com/88186581/135855301-3ca1cd63-bbc6-42fb-ba01-033e14735678.png)
 
+Creating the cluster:
+- Run and open Docker
+- Go to Settings
+- Enable Kubernetes --> apply and restart
+
+`kubectl` to see if installed correctly 
+
+`kubectl version`
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
