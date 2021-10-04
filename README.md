@@ -25,10 +25,16 @@ Creating the cluster:
 - Run and open Docker
 - Go to Settings
 - Enable Kubernetes --> apply and restart
-
+- Restart computer and Docker
+- Both are running, it should look like this:
+![image](https://user-images.githubusercontent.com/88186581/135873961-49dff8b4-ff11-4d1c-895b-d94080ce03a3.png)
 `kubectl` to see if installed correctly 
 
 `kubectl version`
+![image](https://user-images.githubusercontent.com/88186581/135874162-e96b66a8-c8a6-462f-a8df-abb3ac8f0a96.png)
+
+
+
 
 
 
