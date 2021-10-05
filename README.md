@@ -116,6 +116,10 @@ spec:
 
 `kubectl edit deploy "DEPLOYMENT_NAME"` --> change configurations of deployment
 
+opens notepad
+change no of replicas 2 --> 3
+save file and exit
+
 ### rewatch monday afternoon 
 
 
@@ -156,5 +160,23 @@ nginx-deployment   LoadBalancer   10.110.221.129   localhost     80:30442/TCP   
 ```
 
 `kubectl delete pod "POD NAME"`
-- set up correctly, than delete a pod wil not affect the `LocalHost` webpage
+- if set up correctly with the replicas, then deleting a pod will not affect the `LocalHost` webpage
+
+`kubectl get all` - list all running
+
+`kubectl delete svc "SERVICE NAME"` - delete a service
+
+connect pod to deployment using the same label --> label_match == True --> connected, can see in browser
+
+#### rewatch tues morning
+
+## Define
+
+### Cluster
+### Pods
+### Services
+### Deployment
+### API
+### Objects
+### HPA
 

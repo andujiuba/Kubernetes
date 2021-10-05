@@ -11,7 +11,7 @@ spec:
     matchLabels:
       app: nginx # Look for this label to mtch w K8 service
 
-  # Let's creatw a replica set of this with 2 instances/pods
+  # Let's create a replica set of this with 2 instances/pods
   replicas: 2
 
   # Template to use its label for K8 service to launch in the browser

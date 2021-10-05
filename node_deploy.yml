@@ -1,0 +1,6 @@
+# Create a diagram for node deployment and service
+# Use the example of Nginx deployment and service
+# Nodeapp deployment to have 3 pods min -
+# Service within the same cluster and namespace to connect to node deploy
+# type LoadBalancer
+# end goal is to see our node app running port loaclhost:3000

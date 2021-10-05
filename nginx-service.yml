@@ -5,7 +5,7 @@ kind: Service
 # Metadata for name
 metadata:
 
-  name: nginx-deployment
+  name: nginx-svc
   namespace: default
 
 spec:
@@ -16,9 +16,9 @@ spec:
     targetPort: 80
 
   
-# Lets define the selector and label
+# Lets define the selector and label to connect to nginx deployment
   selector:
     app: nginx # This label connects this service to deployment
 
-  # Creatikng LoadBalancer type of deployment
+  # Creating LoadBalancer type of deployment
   type: LoadBalancer
