@@ -180,3 +180,6 @@ connect pod to deployment using the same label --> label_match == True --> conne
 ### Objects
 ### HPA
 
+## Node App and MongoDB
+
+![image](https://user-images.githubusercontent.com/88186581/136015561-6299266c-bead-4e0f-b63f-a8bec2453178.png)
