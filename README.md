@@ -162,6 +162,8 @@ nginx-deployment   LoadBalancer   10.110.221.129   localhost     80:30442/TCP   
 `kubectl delete pod "POD NAME"`
 - if set up correctly with the replicas, then deleting a pod will not affect the `LocalHost` webpage
 
+### deleting a deployment will terminate all pods
+
 `kubectl get all` - list all running
 
 `kubectl delete svc "SERVICE NAME"` - delete a service
@@ -180,3 +182,28 @@ connect pod to deployment using the same label --> label_match == True --> conne
 ### Objects
 ### HPA
 
+## Node App and MongoDB
+
+![image](https://user-images.githubusercontent.com/88186581/136015561-6299266c-bead-4e0f-b63f-a8bec2453178.png)
+
+delete deployment ands service for nginx
+
+create PV.yml and PVC.yml
+create HPA.yml for autoscaling (scale out)
+create deploy and svc for Mongo
+create an env var inside node-deploy to connect to mongo DB on port 27017
+
+create a node_deploy.yml file
+
+create a node_svc.yml 
+`kubectl create -f node_svc.yml`
+
+### making it highly available
+create node_hpa.yml
+
+kubectl get hpa
+
+## create deploy and service for mongo
+## create persistent volume and pvc to claim storage
+## create the app to db
+## diagram for mongo deploy and svc
