@@ -57,6 +57,8 @@ NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   73m
 ```
 
+## [DOCUMENTATION](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-)
+
 ## Setting Up
 
 - create `nginx-deploy.yml` file in new folder
@@ -207,3 +209,33 @@ kubectl get hpa
 ## create persistent volume and pvc to claim storage
 ## create the app to db
 ## diagram for mongo deploy and svc
+
+
+
+## Shortcuts
+create a deployment w/out YAML file
+$ kubectl create deployment NAME --image=image --replicas=3
+
+needs to be exposed - need a service for it
+$ kubectl expose deploy DEPLOY NAME --port=80 --target-port=80 --type=LoadBalancer
+
+scale it - hpa
+$ kubectl autoscale deploy SVC NAME --min=2 --max=10 --cpu-percent=50
+$ kubectl get hpa
+
+$ kubectl get svc NAME -o yml/json (see syntax in YAML/JSON file)
+
+scale out
+$ kubectl scale --replicas=12 deploy DEPLOY NAME
+
+roll back to old deployment
+$ kubectl rollout restart deploy DEPLOY NAME (integrates edits to deploy file)
+$ kubectl rollout history deploy DELOY NAME (see history of rollouts)
+$ kubectl rollout undo deploy DEPLOY NAME (go back)
+$ kubectl rollout restart deploy DEPLOY NAME
+**blue-green deployment** deleting old pods one-by-one and replacing with new pods -- self-healing
+
+
+
+
+
